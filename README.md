@@ -15,18 +15,17 @@ To install the component, run:
 
 To import the component in your project:
 
-```javascript
+```vue
 import InfiScroller from 'vue-infi-scroller';
 ```
 
 Use `InfiScroller` on the window object:
 
-```javascript
+```vue
 <template>
   <div>
     <InfiScroller
       :has-more="hasMore"
-      :scroll-target="refScroller"
       :on-load-more="onLoadMore"
     >
       <ul>
@@ -49,13 +48,9 @@ Use `InfiScroller` on the window object:
     components: { InfiScroller },
     data() {
       return {
-        refScroller: null,
         items: this.generateItems(),
         hasMore: true
       };
-    },
-    mounted() {
-      this.refScroller = this.$refs.scroller;
     },
     methods: {
       generateItems(items = [], length = 30) {
@@ -74,7 +69,7 @@ Use `InfiScroller` on the window object:
 
 Use `InfiScroller` on a custom scroll target (like a modal):
 
-```javascript
+```vue
 <template>
   <div>
     <div
@@ -132,7 +127,7 @@ Use `InfiScroller` on a custom scroll target (like a modal):
 
 Use multiple `InfiScroller` components with custom scroll targets:
 
-```javascript
+```vue
 <template>
   <div>
     <div
