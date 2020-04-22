@@ -15,13 +15,13 @@ To install the component, run:
 
 To import the component in your project:
 
-```vue
+```javascript
 import InfiScroller from 'vue-infi-scroller';
 ```
 
 Use `InfiScroller` on the window object:
 
-```vue
+```javascript
 <template>
   <div>
     <InfiScroller
@@ -69,7 +69,7 @@ Use `InfiScroller` on the window object:
 
 Use `InfiScroller` on a custom scroll target (like a modal):
 
-```vue
+```javascript
 <template>
   <div>
     <div
@@ -127,7 +127,7 @@ Use `InfiScroller` on a custom scroll target (like a modal):
 
 Use multiple `InfiScroller` components with custom scroll targets:
 
-```vue
+```javascript
 <template>
   <div>
     <div
