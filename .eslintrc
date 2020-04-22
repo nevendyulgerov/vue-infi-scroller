@@ -1,0 +1,125 @@
+{
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true,
+    "jquery": true
+  },
+  "rules": {
+    "import/extensions": [
+      "error",
+      "always",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "vue": "never"
+      }
+    ],
+    "indent": [
+      "warn",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "vue/script-indent": [
+      "warn",
+      2,
+      {
+        "baseIndent": 1,
+        "switchCase": 1
+      }
+    ],
+    "vue/attribute-hyphenation": ["warn"],
+    "vue/html-indent": [
+      "warn",
+      2,
+      {
+        "baseIndent": 1
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 150
+      }
+    ],
+    "arrow-parens": [
+      "off"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "compat/compat": "error",
+    "consistent-return": "off",
+    "comma-dangle": "off",
+    "generator-star-spacing": "off",
+    "import/no-unresolved": "error",
+    "import/no-extraneous-dependencies": "off",
+    "no-console": "off",
+    "no-use-before-define": "off",
+    "no-multi-assign": "off",
+    "prefer-template": "off",
+    "promise/param-names": "error",
+    "promise/always-return": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off",
+    "no-shadow": "off",
+    "linebreak-style": 0,
+    "array-bracket-spacing": "off",
+    "function-paren-newline": "off",
+    "camelcase": "off",
+    "no-nested-ternary": "off",
+    "no-case-declarations": "off",
+    "object-curly-newline": [
+      "off"
+    ]
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "plugins": [
+    "import",
+    "promise",
+    "compat",
+    "jest"
+  ],
+  "settings": {
+    "polyfills": [
+      "Promise",
+      "fetch"
+    ],
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".vue",
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off"
+      }
+    }
+  ]
+}
