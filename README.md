@@ -270,7 +270,7 @@ Use multiple `InfiScroller` components with custom scroll targets:
 <tr>
 <td style="text-align:left;"><code>hasMore</code></td>
 <td style="text-align:left;"><code>Boolean</code></td>
-<td style="text-align:left;">false</td>
+<td style="text-align:left;"><code>false</code></td>
 <td style="text-align:left;">Whether there are more items to load. This flag is used to determine if <code>onLoadMore</code> should be called. The entire check looks like this <code>hasMore && shouldLoadMore(...)</code>.</td>
 </tr>
 <tr>
