@@ -213,6 +213,56 @@ Use multiple `InfiScroller` components with custom scroll targets:
 </script>
 ```
 
+Use `InfiScroller` with a spinner/loader:
+
+```javascript
+<template>
+  <div>
+    <InfiScroller
+      :has-more="hasMore"
+      :on-load-more="onLoadMore"
+    >
+      <ul>
+        <li
+          v-for="item in items"
+          :key="item.id"
+          style="height: 100px"
+        >
+          {{ `Item ${item.id}` }}
+        </li>
+      </ul>
+
+      <span v-if="hasMore">Loading...</span>
+    </InfiScroller>
+  </div>
+</template>
+
+<script>
+  import InfiScroller from 'vue-infi-scroller';
+
+  export default {
+    components: { InfiScroller },
+    data() {
+      return {
+        items: this.generateItems(),
+        hasMore: true
+      };
+    },
+    methods: {
+      generateItems(items = [], length = 30) {
+        const nextItems = [...items, ...Array.from({ length })];
+        return nextItems.map((item, index) => ({ id: index }));
+      },
+      onLoadMore() {
+        const nextItems = this.generateItems(this.items);
+        this.items = nextItems;
+        this.hasMore = nextItems.length < 120;
+      }
+    }
+  };
+</script>
+```
+
 ## Props
 
 <table>
