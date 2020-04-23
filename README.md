@@ -77,8 +77,8 @@ Use `InfiScroller` on a custom scroll target (like a modal):
       style="height: 500px; overflow: auto; background-color: white;"
     >
       <InfiScroller
-        :has-more="hasMore"
         :scroll-target="refScroller"
+        :has-more="hasMore"
         :on-load-more="onLoadMore"
       >
         <ul>
@@ -135,8 +135,8 @@ Use multiple `InfiScroller` components with custom scroll targets:
       style="height: 300px; overflow: auto; background-color: white;"
     >
       <InfiScroller
-        :has-more="hasMore"
         :scroll-target="refItemsScroller"
+        :has-more="hasMore"
         :on-load-more="onLoadMoreItems"
       >
         <ul>
@@ -156,8 +156,8 @@ Use multiple `InfiScroller` components with custom scroll targets:
       style="height: 500px; overflow: auto; background-color: white; margin-top: 40px;"
     >
       <InfiScroller
-        :has-more="hasMoreOther"
         :scroll-target="refOtherItemsScroller"
+        :has-more="hasMoreOther"
         :on-load-more="onLoadMoreOtherItems"
       >
         <ul>
