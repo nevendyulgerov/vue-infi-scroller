@@ -74,7 +74,7 @@ Use `InfiScroller` on a custom scroll target (like a modal):
   <div>
     <div
       ref="scroller"
-      style="height: 500px; overflow: auto; background-color: white;"
+      class="items-scroller"
     >
       <InfiScroller
         :scroll-target="refScroller"
@@ -123,6 +123,14 @@ Use `InfiScroller` on a custom scroll target (like a modal):
     }
   };
 </script>
+
+<style>
+  .items-scroller {
+    height: 500px;
+    overflow: auto;
+    background-color: white;
+  }
+</style>
 ```
 
 Use multiple `InfiScroller` components with custom scroll targets:
@@ -132,7 +140,7 @@ Use multiple `InfiScroller` components with custom scroll targets:
   <div>
     <div
       ref="itemsScroller"
-      style="height: 300px; overflow: auto; background-color: white;"
+      class="items-scroller"
     >
       <InfiScroller
         :scroll-target="refItemsScroller"
@@ -153,7 +161,7 @@ Use multiple `InfiScroller` components with custom scroll targets:
 
     <div
       ref="otherItemsScroller"
-      style="height: 500px; overflow: auto; background-color: white; margin-top: 40px;"
+      class="other-items-scroller"
     >
       <InfiScroller
         :scroll-target="refOtherItemsScroller"
@@ -211,6 +219,21 @@ Use multiple `InfiScroller` components with custom scroll targets:
     }
   };
 </script>
+
+<style>
+  .items-scroller {
+    height: 300px;
+    overflow: auto;
+    background-color: white;
+  }
+
+  .other-items-scroller {
+    height: 500px;
+    margin-top: 40px;
+    overflow: auto;
+    background-color: white;
+  }
+</style>
 ```
 
 Use `InfiScroller` with a spinner/loader:
